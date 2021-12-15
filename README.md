@@ -1,2 +1,9 @@
-# tiwm2021-ti-g03
-Practical Work of Internet Technologies subject
+## Forest Clean up Voluteer
+Repository to host the project developed for Internet Technologies, a first year subject at Intituto Politécnico da Maia - IPMAIA. Developed by [João Freitas](https://github.com/joaofreitas04) and [Dário Costa Alves](https://github.com/DarioCostaAlves)
+
+## Project Theme Description
+<div align="justify">
+  The proposed theme of this practical work is to build a website relative to "Forests". As a subtopic of this theme was decided to build a website for volunteering to support Portugal forests.
+  The objective's to create a community that wants to clean those forests helping our environment and at the same time have fun socializing and making the world a better place. It will be provided with a list of all the forests that the community already cleaned containing some useful information like the name, location and description, all related events and even all the quantity and type of material that is possible to extract from there. The past and future events will be presented in a blog format page that will show the name, date of realization, place, categories and the description content where the user will have the possibility to filter some of the results. Another page is the gallery where will have some images or videos of the events, activities and moments that records the amount of trash removed from the forests. The total weight of trash removed by the community will be shown to all the users and will have annual goals that will be an extra motivation to all the volunteers to reach that. To be part of this movement an inquiry to be a volunteer will also be provided where the user will have some fields like name, date of birth, contact, emergency contact, email, number of available hours per week, address and skills or experiences of work that already had.
+</div>
+
