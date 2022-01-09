@@ -14,19 +14,19 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <title>Forest Sons</title>
 </head>
-<body>
+<body page="home">
     <header>
         <nav class="pd-20">
             <a class="nav-brand" href="#">Forest Sons</a>
-            <span id="btn-menu" class="iconify" data-icon="dashicons:menu-alt2" style="color: #654d2a;" onclick="showMenu()"></span>
+            <span id="btn-menu" class="iconify" data-icon="dashicons:menu-alt2" style="color: #654d2a;" onclick="showNavMenu()"></span>
             <button class="btn btn-green">Be part of it</button>
             <div id="menu" class="nav-menu">
                 <ul>
                     <li>
-                        <a class="brown" href="#">Home</a>
+                        <a class="brown" href="/index.html">Home</a>
                     </li>
                     <li>
-                        <a class="brown" href="#">Our Work</a>
+                        <a class="brown" href="/our-work.html">Our Work</a>
                     </li>
                     <li>
                         <a class="brown" href="#">Forests</a>
@@ -37,20 +37,23 @@
     </header>
     <main>
         <section class="initial pd-20">
-            <div class="initial-award">
-                <strong class="darkgray">Award Winning Team</strong>
-                <h3>Supporting Portugal's Forests <br> 
-                    More than a Thousand <br><span>Volunteers</span></h3>
-                <button class="btn btn-brown">
-                    <span class="iconify" data-icon="fa-solid:search" style="color: white;"></span>
-                    Our Work
-                </button>
-            </div>           
-        </section>
-        <section class="volunteers white bk-darkgreen pd-20 t-center">
-            <div class="tree-div">
-                <img src="/images/oak.svg" alt="" width="50">
+            <div class="row">
+                <div class="left">
+                    <strong class="darkgray">Award Winning Team</strong>
+                    <h3>Supporting Portugal's Forests <br> 
+                        More than a Thousand <br><span>Volunteers</span></h3>
+                    <button class="btn btn-brown">
+                        <span class="iconify" data-icon="fa-solid:search" style="color: white;"></span>
+                        Our Work
+                    </button>                     
+                </div>           
+                <div class="right">
+                    <img src="/images/logo_fs.svg" alt="Logo">     
+                </div>
             </div>
+        </section>
+        <section class="volunteers white pd-20 t-center">
+            
             <div class="row">
                 <div class="left bk-white">
                     <div class="card">
@@ -69,11 +72,14 @@
                     </div> 
                 </div>
                 <div class="right bk-brown">
+                    <div class="tree-div">
+                        <img src="/images/oak.svg" alt="">
+                    </div>
                     <div class="card">
                         <div class="inside">
                             <img src="/images/user_da_vol.jpeg" alt="user">
                             <h6 class="brown">Dário Costa</h6>
-                            <p>Award winning volunteer of the year</p>
+                            <p>Award winning volunteer of this year</p>
                         </div>
                     </div>
                     <div class="card">
@@ -84,11 +90,10 @@
                         </div>
                     </div> 
                     <div class="text">
-                        <p>Anim exercitation esse nisi quis esse veniam eiusmod ipsum nulla esse. Enim elit est nulla officia duis dolor sunt enim. Exercitation officia qui tempor fugiat ipsum cupidatat adipisicing anim officia. Anim laboris dolor mollit irure exercitation eiusmod. Qui anim laborum minim dolor in nostrud do deserunt ea.</p>
+                        <p>Every year we reveal the volunteer of the current year and how we can be the vest volunteer? Being active and assiduous to the ForestSons events. The winner didn't receive any amount of money but we think that is good to show the best volunteers. If you're a volunteer you're already a winner.</p>
                     </div> 
                 </div>    
-            </div>
-            
+            </div>     
         </section>
         <section class="goals">
             <div class="graphs">
@@ -124,7 +129,7 @@
         </section>
         <section class="touch bk-brown white t-center pd-20"> 
             <h2 class="darkgreen">Keep in touch</h2>
-            <p>Aliquip irure do magna ullamco eiusmod nulla ea nulla elit culpa nisi deserunt id. Eiusmod labore sunt proident enim do ipsum aliqua minim reprehenderit sint reprehenderit. Commodo ullamco reprehenderit id aliqua incididunt. Culpa tempor occaecat laboris cupidatat cillum incididunt ipsum. Tempor eu fugiat laborum ad.</p>
+            <p>Visiting our blog you can check all the news that we ForestSons Volunteers have. Records, challenges, trophies and past or future events will appear. So blog it's a must-go place to stay in pair of everything. Did you know that in the first two weeks of 2022 we remove more than 5kg of trash from Portuguese forests?</p>
             <button class="btn btn-line-darkgreen">Visit Our Blog</button>
         </section>
     </main>
@@ -132,7 +137,7 @@
         <article class="background">
             <section class="forests white t-center pd-20">
                 <h2>Forests</h2>
-                <p>Anim exercitation esse nisi quis esse veniam eiusmod ipsum nulla esse. Enim elit est nulla officia duis dolor sunt enim. Exercitation officia qui tempor fugiat ipsum cupidatat adipisicing anim officia. Anim laboris dolor mollit irure exercitation eiusmod. Qui anim laborum minim dolor in nostrud do deserunt ea.</p>
+                <p>The Portuguese forest is a very old ecosystem, beginning with deciduous trees in the North and evergreen trees in the South. Currently, the Portuguese forest area occupies about 3.3 million hectares (8.15 million acres). -Portugal has the highest proportion of forest area.</p>
                 <button class="btn btn-brown">Forests</button>
             </section>
             <section class="foot t-center pd-20">
@@ -166,15 +171,13 @@
     </footer>
     <script>
         var btnMenu = document.getElementById("btn-menu")
-        var menu =  document.getElementById("menu")
-
-        function showMenu(){
-            if(!menu.classList.contains("active")){
-                menu.style.display = 'block'
-                menu.classList.add("active")
-            }else{
-                menu.style.display = 'none'
-                menu.classList.remove("active")
+        
+        function showNavMenu() {
+            var x = document.getElementById("menu");
+            if (x.className === "nav-menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-menu";
             }
         }
     </script>
