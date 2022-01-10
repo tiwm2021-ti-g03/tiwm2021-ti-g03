@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forest Sons - Forest Clean Volunteer">
+    <meta name="author" content="João Freitas, Dário Costa Alves">
+    <meta name="keywords" content="HTML,CSS,Forest,Volunteer,Forest Sons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <title>Forest Sons - Forests</title>
+</head>
+<body page="other">
+    <header>
+        <nav class="pd-20">
+            <a class="nav-brand" href="#">Forest Sons</a>
+            <span id="btn-menu" class="iconify" data-icon="dashicons:menu-alt2" style="color: #654d2a;" onclick="showNavMenu()"></span>
+            <button class="btn btn-green" onclick="window.location.href='inquiry.html'">Be part of it</button>
+            <div id="menu" class="nav-menu">
+                <ul>
+                    <li>
+                        <a class="brown" href="/index.html" id="test">Home</a>
+                    </li>
+                    <li>
+                        <a class="brown" href="/our-work.html">Our Work</a>
+                    </li>
+                    <li>
+                        <a class="brown" href="/forests.html">Forests</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>  
+    </header>
+    <main>
+        <section class="initial-v2 pd-20 t-center">    
+            <div class="row">
+                <div class="left">
+                    <strong class="darkgray">Cleaning Forests</strong>
+                    <h3>About them.<br> 
+                    <span> Forests.</span></h3>                                 
+                </div>  
+                <div class="right">
+                    <p class="gray t-justify mtb-20">
+                        Forests are the main land-use in Portugal. In the Mainland forests are dominated by indigenous species, namely several oaks (including cork oak and holm oak “montados”) and pine trees.
+                        Eucalyptus (mainly Tasmanian blue gum and shinning gum) represent a large share of the forest area and the remaining area is occupied by less common species (including sweet chestnut, carob
+                        tree, acacia, poplar, riparian and other species).                
+                    </p>     
+                </div>
+            </div>                            
+        </section>               
+        <section class="forests-list">
+            <div class="forest bk-lightgray pd-40">
+                <table>
+                  <caption></caption>
+                  <thead>
+                      <tr>
+                          <td>
+                            <figure>
+                                <img id="imageGeres" alt="Forest Geres">
+                                <figcaption>
+                                    <strong id="nameGeres"></strong><br>
+                                    <p title="Forest Location"><span class="iconify" data-icon="carbon:location-filled" style="color: #f24e1e;"></span> <a id="localizationGeres" href="" target="_blank"></a> </p>
+                                    <p id="areaGeres" title="Forest Area"><span class="iconify" data-icon="foundation:trees" style="color: #0fa958;"></span></p>
+                                    <p id="trashQntGeres" title="Picked Trash Quantity"><span class="iconify" data-icon="radix-icons:crumpled-paper" style="color: #654d2a;"></span></p>                                        
+                                </figcaption>
+                            </figure>    
+                          </td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                              <p id="descriptionGeres"></p>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>              
+            </div>
+
+            <div class="forest bk-lightgray pd-40">
+                <table>
+                  <caption></caption>
+                  <thead>
+                      <tr>
+                          <td>
+                            <figure>
+                                <img id="imageBucaco" alt="Forest Bucaco">
+                                <figcaption>
+                                    <strong id="nameBucaco"></strong><br>
+                                    <p title="Forest Location"><span class="iconify" data-icon="carbon:location-filled" style="color: #f24e1e;"></span> <a id="localizationBucaco" href="" target="_blank"></a> </p>
+                                    <p id="areaBucaco" title="Forest Area"><span class="iconify" data-icon="foundation:trees" style="color: #0fa958;"></span></p>
+                                    <p id="trashQntBucaco" title="Picked Trash Quantity"><span class="iconify" data-icon="radix-icons:crumpled-paper" style="color: #654d2a;"></span></p>                                        
+                                </figcaption>
+                            </figure>    
+                          </td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                              <p id="descriptionBucaco"></p>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>              
+            </div>
+
+            <div class="forest bk-lightgray pd-40">
+                <table>
+                  <caption></caption>
+                  <thead>
+                      <tr>
+                          <td>
+                            <figure>
+                                <img id="imageSeteMontes" alt="Forest Sete Montes">
+                                <figcaption>
+                                    <strong id="nameSeteMontes"></strong><br>
+                                    <p title="Forest Location"><span class="iconify" data-icon="carbon:location-filled" style="color: #f24e1e;"></span> <a id="localizationSeteMontes" href="" target="_blank"></a> </p>
+                                    <p id="areaSeteMontes" title="Forest Area"><span class="iconify" data-icon="foundation:trees" style="color: #0fa958;"></span></p>
+                                    <p id="trashQntSeteMontes" title="Picked Trash Quantity"><span class="iconify" data-icon="radix-icons:crumpled-paper" style="color: #654d2a;"></span></p>                                        
+                                </figcaption>
+                            </figure>    
+                          </td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                              <p id="descriptionSeteMontes"></p>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>              
+            </div>
+
+            <div class="forest bk-lightgray pd-40">
+                <table>
+                  <caption></caption>
+                  <thead>
+                      <tr>
+                          <td>
+                            <figure>
+                                <img id="imageCovao" alt="Forest Covao">
+                                <figcaption>
+                                    <strong id="nameCovao"></strong><br>
+                                    <p title="Forest Location"><span class="iconify" data-icon="carbon:location-filled" style="color: #f24e1e;"></span> <a id="localizationCovao" href="" target="_blank"></a> </p>
+                                    <p id="areaCovao" title="Forest Area"><span class="iconify" data-icon="foundation:trees" style="color: #0fa958;"></span></p>
+                                    <p id="trashQntCovao" title="Picked Trash Quantity"><span class="iconify" data-icon="radix-icons:crumpled-paper" style="color: #654d2a;"></span></p>                                        
+                                </figcaption>
+                            </figure>    
+                          </td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                              <p id="descriptionCovao"></p>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>              
+            </div>
+        </section>   
+    </main>
+    <footer>
+        <article class="background">           
+            <section class="foot t-center pd-20">
+                <h2 class="green">ForestSons</h2>
+
+                <div class="foot-content pd-20">
+                    <div class="foot-left">
+                        <h3 class="green">Volunteering</h3>
+                        <a class="white" href="">Be part of it</a>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="foot-mid">
+                        <h3 class="green">Forests</h3>
+                        <a class="white" href="/blog.html">Blog</a><br>
+                        <a class="white" href="/gallery.html">Our Gallery</a><br>
+                        <a class="white" href="/forests.html">Forests</a>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="foot-right">
+                        <h3 class="green">About</h3>
+                        <a class="white" href="/our-work.html">Our Work</a>
+                    </div>
+                </div>               
+            </section>
+            <div class="copyright white pd-20">
+                Copyright &#169; 2022. All rights reserved.
+            </div>
+        </article>              
+        
+
+    </footer>
+    <script>
+        var btnMenu = document.getElementById("btn-menu")
+        
+        document.addEventListener("DOMContentLoaded", function(){
+
+            //Reading XML File
+            var Connect = new XMLHttpRequest();
+            Connect.open("GET","forests.xml",false);
+            Connect.setRequestHeader("Content-Type", "text/xml");
+            Connect.send(null);
+            var document = Connect.responseXML;
+
+            // Reading forest with id geres from XML
+            var geres = document.getElementById("geres");	 
+            descriptionGeres.innerHTML += geres.getElementsByTagName("description")[0].childNodes[0].nodeValue;                               
+            nameGeres.innerHTML += " " + geres.getElementsByTagName("name")[0].childNodes[0].nodeValue;                                           
+            areaGeres.innerHTML += " " + geres.getElementsByTagName("area")[0].childNodes[0].nodeValue + "<sup>2</sup>";                                           
+            localizationGeres.innerHTML += geres.getElementsByTagName("localization")[0].childNodes[0].nodeValue;  
+            localizationGeres.href = geres.getElementsByTagName("maps")[0].childNodes[0].nodeValue;                                 
+            imageGeres.src = geres.getElementsByTagName("image")[0].childNodes[0].nodeValue;      
+            trashQntGeres.innerHTML += " " + geres.getElementsByTagName("trashQnt")[0].childNodes[0].nodeValue + "kg";        
+            
+            //Reading forest with id bucaco from XML
+            var bucaco = document.getElementById("bucaco");	 
+            descriptionBucaco.innerHTML += bucaco.getElementsByTagName("description")[0].childNodes[0].nodeValue;                               
+            nameBucaco.innerHTML += " " + bucaco.getElementsByTagName("name")[0].childNodes[0].nodeValue;                                           
+            areaBucaco.innerHTML += " " + bucaco.getElementsByTagName("area")[0].childNodes[0].nodeValue + "<sup>2</sup>";                                           
+            localizationBucaco.innerHTML += bucaco.getElementsByTagName("localization")[0].childNodes[0].nodeValue;  
+            localizationBucaco.href = bucaco.getElementsByTagName("maps")[0].childNodes[0].nodeValue;                                 
+            imageBucaco.src = bucaco.getElementsByTagName("image")[0].childNodes[0].nodeValue;      
+            trashQntBucaco.innerHTML += " " + bucaco.getElementsByTagName("trashQnt")[0].childNodes[0].nodeValue + "kg";        
+
+            //Reading forest with id seteMontes from XML
+            var seteMontes = document.getElementById("seteMontes");	 
+            descriptionSeteMontes.innerHTML += seteMontes.getElementsByTagName("description")[0].childNodes[0].nodeValue;                               
+            nameSeteMontes.innerHTML += " " + seteMontes.getElementsByTagName("name")[0].childNodes[0].nodeValue;                                           
+            areaSeteMontes.innerHTML += " " + seteMontes.getElementsByTagName("area")[0].childNodes[0].nodeValue + "<sup>2</sup>";                                           
+            localizationSeteMontes.innerHTML += seteMontes.getElementsByTagName("localization")[0].childNodes[0].nodeValue;  
+            localizationSeteMontes.href = seteMontes.getElementsByTagName("maps")[0].childNodes[0].nodeValue;                                 
+            imageSeteMontes.src = seteMontes.getElementsByTagName("image")[0].childNodes[0].nodeValue;      
+            trashQntSeteMontes.innerHTML += " " + seteMontes.getElementsByTagName("trashQnt")[0].childNodes[0].nodeValue + "kg";        
+
+
+            //Reading forest with id covao from XML
+            var covao = document.getElementById("covao");	 
+            descriptionCovao.innerHTML += covao.getElementsByTagName("description")[0].childNodes[0].nodeValue;                               
+            nameCovao.innerHTML += " " + covao.getElementsByTagName("name")[0].childNodes[0].nodeValue;                                           
+            areaCovao.innerHTML += " " + covao.getElementsByTagName("area")[0].childNodes[0].nodeValue + "<sup>2</sup>";                                           
+            localizationCovao.innerHTML += covao.getElementsByTagName("localization")[0].childNodes[0].nodeValue;  
+            localizationCovao.href = covao.getElementsByTagName("maps")[0].childNodes[0].nodeValue;                                 
+            imageCovao.src = covao.getElementsByTagName("image")[0].childNodes[0].nodeValue;      
+            trashQntCovao.innerHTML += " " + covao.getElementsByTagName("trashQnt")[0].childNodes[0].nodeValue + "kg";        
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<forests xmlns="http://www.forests.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.forests.org forests.xsd">
+    <forest id="geres">
+        <name>Peneda Geres National Park</name>
+        <image>https://www.tripsavvy.com/thmb/nkcvVnxxV0Bwj8zYvkP8xKXK8Ik=/900x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/peneda-geres-national-park-491447484-d1d3417a83f548a5a3302ef4239e3920.jpg</image>
+        <area>695.9km</area>
+        <localization>Minho e Trás-os-Montes</localization>
+        <maps>https://goo.gl/maps/Paf2PFPYmEukifo27</maps>
+        <trashQnt>20</trashQnt>
+        <description>Created in 1971, Peneda-Gerês National Park has a total area of 72 290 hectares, located in the old provinces of Minho and Trás-os-Montes, in Northern Portugal and just 100 km away from Porto. In the park you’ll find dozens of granite villages that haven’t changed much since the creation of Portugal in the 12th century. The oldest villages still maintain the old ways and here you’ll find women dressed in black taking cows by the paved-stone streets and shepherds leaving their livestock grazing in the meadows for several months. Animals like wolves, boars, badgers, otters, deers and wild horses still live in the most secluded areas of the park.</description>
+    </forest>
+    <forest id="bucaco">
+        <name>Mata do Buçaco</name>
+        <image>https://images.trustinnews.pt/uploads/sites/5/2019/10/bucaco-na-mata-encantada-que-saramago-dizia-ser-incapaz-de-descrever-2-1024x683.jpg</image>
+        <area>4km</area>
+        <localization>Luso, Aveiro</localization>
+        <maps>https://goo.gl/maps/9S355pHhdCdeCxK1A</maps>
+        <trashQnt>5.5</trashQnt>
+        <description>Often called the "enchanted forest" of Portugal. This is the largest forest on mainland Portugal, located in Luso in the central region of the country, and it is also one of the most beautiful. Less a natural forest than an enormous botanical collection, the 105 hectare walled wood is filled with not only native trees, but also exotic specimens that were introduced by Portuguese sailors from as far away as Brazil and India. There are over 250 species of trees and shrubs in the forest, so you will have plenty to see on your visit.</description>
+    </forest>
+    <forest id="seteMontes">
+        <name>Mata dos Sete Montes</name>
+        <image>https://longomaihosting.ddns.net/str/containers/turismotomar/whatsapp-image-2020-11-02-at-32921-pm-3-aspect43.jpeg</image>
+        <area>0.5km</area>
+        <localization>Médio Tejo, Tomar</localization>
+        <maps>https://goo.gl/maps/b5cjafHUnoxS8Ho38</maps>
+        <trashQnt>2.5</trashQnt>
+        <description>This woodland park is located in the city of Tomar has one of the more interesting origin stories in this list. The woodland, located in the centre of the city, was first established and walled in by the Order of Christ, the remnants of the Knights Templar who fled to Portugal following the abolition of the order by Pope Clement V in 1312. The new order founded a convent on the site, and used the 39 hectares enclosed by the wall both for cultivation, and as a natural landscape that could serve as a contemplative space for the members of the religious order.</description>
+    </forest>
+    <forest id="covao">
+        <name>Covão da Ametade</name>
+        <image>https://mundoindefinido.com/wp-content/uploads/2018/06/Cov%C3%A3o-dAmetade-01-Serra-da-Estrela-Portugal-Mundo-Indefinido-1920x1440.jpg</image>
+        <area>4.4km</area>
+        <localization>Loriga, Guarda</localization>
+        <maps>https://goo.gl/maps/YQY9GrP6Cm4amrgDA</maps>
+        <trashQnt>1.5</trashQnt>
+        <description>Covão da Ametade is a paradisiacal setting full of bucolic and poetic sentiment, one of the most symbolic and beautiful places in Serra da Estrela. It is located at the beginning of the Zêzere Glacier Valley. It is a poorly drained depression located in a glacial cove downstream from the summit cove. Currently, it is in Covão da Ametade that the Zêzere River takes shape, in the small plain originating in glacial sediments that was previously a lagoon with the same origin. It is a very attractive area due to the surrounding vegetation mostly composed of birch trees, a plant that has the particularity of creating an ecosystem with a great biodiversity. Although the place is at a quota close to 1500 meters of altitude, it is just not accessible on the most severe winter days when the roads do not allow passage due to snowfall. This place is sought after by winter and mountain sportsmen who choose to start their hikes and climbs in the area along the caves and rock formations that end next to the Cântaro Magro.</description>
+    </forest>
+</forests>

@@ -1,0 +1,22 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.forests.org" targetNamespace="http://www.forests.org" elementFormDefault="qualified">
+    <xs:element name="forests">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="forest" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="image" type="xs:string"/>
+                            <xs:element name="area" type="xs:string"/>
+                            <xs:element name="localization" type="xs:string"/> 
+                            <xs:element name="maps" type="xs:anyURI"/>                      
+                            <xs:element name="trashQnt" type="xs:string"/>                     
+                            <xs:element name="description" type="xs:string"/>                     
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
