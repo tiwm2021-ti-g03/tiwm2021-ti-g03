@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blog.org" targetNamespace="http://www.blog.org" elementFormDefault="qualified">
+    <xs:element name="blog">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="post" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="image" type="xs:string"/>
+                            <xs:element name="date" type="xs:string"/>
+                            <xs:element name="description" type="xs:string"/>                 
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

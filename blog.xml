@@ -1,0 +1,44 @@
+<blog xmlns="http://www.blog.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blog.org blog.xsd">
+    <post id="rappel">
+        <title>Rappel Event with the Community Forest Sons</title>
+        <image>https://images.pexels.com/photos/97804/pexels-photo-97804.jpeg</image>
+        <date>1 January 2022</date>
+        <description>
+            An Rappel event with our community will be realized in Peneda Geres National Park on 17 of January. All of the Forest Sons community can bring all of the family together in a fun and family-oriented way. The meeting is at 9am and will last until 6pm, with rappel as the main activity and other surprise stuff. Bring all the equipment needed to do all the work for the day in a comfortable way.
+        </description>
+    </post>
+    <post id="onu">
+        <title>ONU cites forestry project in Portugal as an example of conservation</title>
+        <image>https://images.pexels.com/photos/6931404/pexels-photo-6931404.jpeg</image>
+        <date>12 May 2021</date>
+        <description>
+            The United Nations Environment Program, UNEP, advocates the conservation and restoration of forests on a large scale as a way of combating large forest fires. According to him, active replanting should be a focus on restoring the forest landscape in areas subject to fire. In the Algarve region of Portugal, for example, a project aims to recreate belts of native, fire-resistant cork oaks between more flammable commercial plantations of eucalyptus and pine. 
+            For the UN(ONU) agency, “Portugal is also an example of how reducing the risk of fire can mean restoring the economic and social fabric of entire regions.” The agency highlights the country's new national fire management plan, which groups together natural and social restoration as one of its five pillars. United Nations Food and Agriculture Organization (FAO) wildfire expert Peter Moore says “more people need to take an interest in restoring and managing these landscapes, and more support from governments and businesses is needed.
+            
+            Withdrawn from ONU News 
+        </description>
+    </post>
+    <post id="trash">
+        <title>More than 1000 kg collected in December</title>
+        <image>/images/trash.jpg</image>
+        <date>21 December 2021</date>
+        <description>
+            The community Forest Sons, which is one of the biggest volunteer forest cleaners, collected over 1000 kg of trash in December. 
+            This movement has already had effects, turning the Portuguese forests into a cleaner place. 
+            The people that are part of this huge and motivated community are so invested in it and want to achieve more and more goals for the next year. 
+        </description>
+    </post>
+    <post id="tour">
+        <title>Cleaning Forests Around the World</title>
+        <image>https://images.pexels.com/photos/4388558/pexels-photo-4388558.jpeg</image>
+        <date>1 January 2022</date>
+        <description>
+            Forest Sons already help a lot Portugal Environment, but the world is not just our country.
+            We decided that our community is prepared to take a further step in that important mission: make the world a cleaner place.
+            In order to start with it, a tour around the world would start on March 1st, 2022 and end on June 1st, 2022. We are going to clean up all the forests as much as we can and help other countries and volunteer forest companies that need our help.
+            In the end, the world and humans gain from this, and to do that, we need your help. Do you want to be part of this mission? Be part of it by filling in our inquiry.
+        </description>
+    </post>
+
+    
+</blog>

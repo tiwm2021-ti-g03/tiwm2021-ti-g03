@@ -17,6 +17,35 @@ body:not([page=home]) footer .background{
     background: white;
 }
 
+/* SCROLL BAR CSS */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: rgb(134, 134, 134); 
+    border-radius: 10px;
+}
+
+/* KEYFRAMES */
+
+/* Touch Advice Warning - Blog */
+@keyframes moving {
+    0%   { font-size: 4em; }
+    100% { font-size: 4.5em; }
+}
+
+/* CHARTS - Homepage */
+@keyframes loading {
+    0%   { transform: scale(0.8) rotate(25deg); }
+    100% { transform: scale(1) rotate(385deg); }
+}
+
+
 /* align text center */
 .t-center{
     text-align: center;
@@ -36,7 +65,7 @@ body:not([page=home]) footer .background{
 }
 
 .ml-20{
-    margin-left: 20;
+    margin-left: 20px;
 }
 
 /* Background Colors */
@@ -78,7 +107,6 @@ body:not([page=home]) footer .background{
 .darkgray{
     color: #7B7B7B;
     text-transform: uppercase;
-    font-size: .7em;
 }
 .white{
     color: white;
@@ -201,7 +229,6 @@ nav .nav-menu a{
 }
 
 .initial .row .left strong{
-    font-size: 10px;
     text-transform: uppercase;
 }
 
@@ -327,12 +354,6 @@ h3 span::before{
     display: flex;
     justify-content: center;
     padding: 20px;
-}
-
-/* Keyframes for charts */
-@keyframes loading {
-    0%   { transform: scale(0.8) rotate(25deg); }
-    100% { transform: scale(1) rotate(385deg); }
 }
 
 .graphs{    
@@ -571,12 +592,12 @@ h3 span::before{
 
 /* FORESTS PAGE CSS */
 .forests-list {
-    padding: 50px;
+    width: 100%;
 }
 
 .forest{
-    border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
 }
 
 .forest table tbody{
@@ -584,13 +605,11 @@ h3 span::before{
 }
 
 .forest figure{
-    display: flex;
-    justify-content: left;
     padding-bottom: 20px;
 }
 
-.forest figure figcaption{
-    padding-left: 20px;
+.forest figure figcaption strong{
+    padding-bottom: 40px;
 }
 
 .forest figure figcaption p{
@@ -607,9 +626,143 @@ h3 span::before{
 }
 
 .forest table thead figure img{
-    width: 300px;
+    width: 100%;
     object-fit: cover;
 }
+
+/* BLOG PAGE CSS */
+
+/* Blog Section - Blog */
+
+.warning-touch{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    height: 100px;
+}
+
+.warning-touch .iconify{
+    font-size: 4em;
+    padding: 20px;
+    animation: moving 2s infinite
+}
+
+.blog .blog-gallery .post .post-img{
+    object-fit: contain;
+    margin-bottom: 40px;
+}
+
+.blog .blog-gallery .post .post-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+    filter: brightness(0.7);
+    transition: filter 0.3s linear;
+}
+
+.blog .blog-gallery .post:hover .post-img{
+    filter: brightness(0.3);
+}
+
+.blog .post{
+    position: relative;
+    display: flex;
+    height: 400px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.blog .post figcaption{
+    position: absolute;
+    padding: 30px;
+    font-size: 20px;
+    transition: margin-top 1s linear;
+}
+
+.blog .post figcaption .post-date{
+    font-size: 12px;
+}
+
+.blog .post figcaption .post-desc{
+    height: 240px;
+    overflow-y: scroll;
+    text-align: justify;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.blog .post:hover figcaption .post-desc{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* INQUIRY CSS*/
+input{
+    border-radius: 10px;
+    border:none;
+    padding: 5px;
+    width: 90%;    
+    margin: 20px 0px;
+    color: #654D2A;        
+}
+
+textarea{
+    border-radius: 10px;
+    border:none;
+    padding: 5px;
+    width: 90%;    
+    margin: 20px 0px;
+    color: #654D2A;        
+}
+
+.wrapper { position: relative; }
+
+.wrapper .iconify{
+    position: absolute;
+    top: 25px;
+}
+
+.inquiry .btn{
+    padding: 18px 40px;
+}
+
+.inquiry .left{
+    display: none;
+}
+.inquiry .left .btn{
+    display: none;
+}
+
+.wrapper .iconify{
+    color: #654D2A;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+    color:#654D2A;        
+    
+}
+
+input[type="text"]{
+    padding-left: 30px;
+}
+textarea{
+    padding-left: 30px;
+    resize: none;
+}
+
+
+input:focus, textarea:focus{
+    outline: none;    
+}
+
+.wrapper .iconify{             
+    left: 1%;            
+}
+
 
 /* MEDIAS*/
 
@@ -871,6 +1024,12 @@ h3 span::before{
     }
 
     /* FORESTS PAGE CSS */
+
+    .forests-list {
+        width: fit-content;
+        padding: 50px;
+    }
+
     .forest figure figcaption strong{
         font-size: 30px;
     }
@@ -881,6 +1040,96 @@ h3 span::before{
     
     .forest figure img{
         width: 300px
+    }
+
+    /* BLOG PAGE CSS */
+
+    .warning-touch{display: none;}
+
+    .blog-gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 450px);
+        grid-gap: 15px;
+        padding: 40px 70px;
+    }
+
+    .blog .post{
+        height: 450px;
+    }
+
+    .blog .post figcaption .post-desc{
+        height: 295px
+    }
+
+    .post-itm--1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .post-itm--2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .post-itm--3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .post-itm--4 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    /* Inquiry Page - Inquiry Section */
+
+    .inquiry .left{
+        text-align: center;
+        display: block;
+    }
+    .inquiry .left img{
+        width: 200px;
+    }
+
+    .inquiry input{        
+        width: 55%;
+    }
+    .inquiry textarea{
+        width: 55%;
+    }
+
+    .inquiry{
+        text-align: center;    
+    }
+
+    input[type="text"]{
+        padding-left: 50px;
+        word-break: break-all;
+    }
+
+    textarea{
+        padding-left: 60px;
+    }
+
+    .wrapper .iconify{             
+        left: 22%;            
+    }
+
+    .inquiry .left{
+        padding-bottom: 50px;
+    }
+
+    .inquiry .left .btn{
+        margin-bottom: 20px;
     }
 }
 
@@ -970,6 +1219,49 @@ h3 span::before{
     .forests-list {
         padding: 120px;
     }
+
+    /* Inquiry Page */
+    .inquiry img{
+        width: 500px;
+    }
+    .inquiry form{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 20px;
+    }
+    .inquiry input{
+        width: 50%;        
+    }
+
+  
+    .left{
+        position: relative;
+    }
+    .inquiry .left{
+        display: flex;    
+        margin-left: 25%;            
+    }
+    .inquiry .right .btn{
+        display: none;
+    }
+
+    .inquiry .left .btn{
+        display: block;
+        position: absolute;        
+        left: 30px;
+        bottom: 5px;
+    }
+
+    .right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .inquiry textarea{
+        width: 48%;
+    }
+
 }
 
 @media only screen and (min-width: 1201px) {
@@ -1046,9 +1338,67 @@ h3 span::before{
 
 
     /* FORESTS PAGE CSS */
+    .forest figure{
+        display: flex;
+        justify-content: left;
+        padding-bottom: 20px;
+    }
+
+    .forest figure figcaption{
+        padding-left: 20px;
+    }
+
     .forest table thead figure img{
         width: 400px;
     }
+
+    /* BLOG PAGE CSS */
+    .blog-gallery{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 450px);
+    }
+
+    .blog .post{
+        height: 450px;
+    }
+
+    .blog .post:nth-child(4){
+        height: 100%;
+    }
+
+    .blog .post figcaption .post-desc{
+        height: 280px;
+    }
+
+    .post-itm--1 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .post-itm--2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .post-itm--3 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .post-itm--4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+  
+    
 }
 
 @media only screen and (min-width: 1400px) {
@@ -1065,7 +1415,7 @@ h3 span::before{
     /* FOREST PAGE CSS */
     .forest table{
         display: flex;
-        align-items: left;
+        align-items: flex-start;
         justify-content: left;
     }
     
@@ -1098,6 +1448,8 @@ h3 span::before{
     .forest table thead figure{
         padding-bottom: 0px;
     }
+
+
 }
 
 
