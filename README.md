@@ -1,9 +1,47 @@
-## Forest Clean up Voluteer
+## ForestSons
+* * *
 Repository to host the project developed for Internet Technologies, a first year subject at Intituto Politécnico da Maia - IPMAIA. Developed by [João Freitas](https://github.com/joaofreitas04) and [Dário Costa Alves](https://github.com/DarioCostaAlves)
 
 ## Project Theme Description
+* * *
 <div align="justify">
-  The proposed theme of this practical work is to build a website relative to "Forests". As a subtopic of this theme was decided to build a website for volunteering to support Portugal forests.
-  The objective's to create a community that wants to clean those forests helping our environment and at the same time have fun socializing and making the world a better place. It will be provided with a list of all the forests that the community already cleaned containing some useful information like the name, location and description, all related events and even all the quantity and type of material that is possible to extract from there. The past and future events will be presented in a blog format page that will show the name, date of realization, place, categories and the description content where the user will have the possibility to filter some of the results. Another page is the gallery where will have some images or videos of the events, activities and moments that records the amount of trash removed from the forests. The total weight of trash removed by the community will be shown to all the users and will have annual goals that will be an extra motivation to all the volunteers to reach that. To be part of this movement an inquiry to be a volunteer will also be provided where the user will have some fields like name, date of birth, contact, emergency contact, email, number of available hours per week, address and skills or experiences of work that already had.
+  The proposed theme of this practical work is to build a website related to "Forests". As a subtopic of this theme, it was decided to build a website for volunteering to support Portugal's forests. The objective is to create a community that wants to clean up those forests, helping our environment while at the same time having fun socializing and making the world a better place. ForestSons website starts with a "trunk of a tree" (homepage) that take you to all the ramifications of it (remaining pages). The homepage will contain important information, like individual or collective objectives, and a brief description of other pages. One of the pages, "Forests", will contain a list of all the forests that the community has already cleaned. Past and future events, news about the community and useful information to be updated in "forest world" will be presented in a blog format page. Another page is the gallery,which will have some images or videos of the events, activities and moments to remember community goals or stories. The total weight of trash removed by the community will be shown to all the users and will have annual goals that will be an extra motivation for all the volunteers to reach that. An inquiry with some required fields to be a forest son will be available on our page too. Finally, our work and story are described in detail on the "Our Work" page.
 </div>
 
+## Repository Organization
+* * *
+- **Source code** it's contained in the [src folder](src/)
+- **Report chapters** are contained in [doc folder](doc/)
+
+## Gallery
+* * *
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+## Technologies
+* * *
+
+- [HTML5](https://www.w3schools.com/html/) + [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [XML](https://www.w3schools.com/xml/)
+- [Javascript](https://www.javascript.com/)
+
+## Frameworks
+- [Iconify](https://iconify.design/)
+
+## Report
+* * *
+### Project presentation
+* Chapter 1: [Project presentation](doc/c1.md)
+### User Interface 
+* Chapter 2: [User Interface](doc/c2.md)
+### Product
+* Chapter 3: [Product](doc/c3.md)
+### Presentation
+* Chapter 4: [Presentation](doc/c4.md)
+
+## Team
+* João Freitas [@joaofreitas04](https://github.com/joaofreitas04)
+* Dário Costa Alves [@DarioCostaAlves](https://github.com/DarioCostaAlves)
