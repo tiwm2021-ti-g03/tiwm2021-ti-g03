@@ -14,10 +14,10 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <title>Forest Sons - Inquiry</title>
 </head>
-<body page="inquiry">
+<body page="other">
     <header>
         <nav class="pd-20">
-            <a class="nav-brand" href="index.html">Forest Sons</a>
+            <a class="nav-brand" href="#">Forest Sons</a>
             <span id="btn-menu" class="iconify" data-icon="dashicons:menu-alt2" style="color: #654d2a;" onclick="showNavMenu()"></span>
             <button class="btn btn-green" onclick="window.location.href='inquiry.html'">Be part of it</button>
             <div id="menu" class="nav-menu">
@@ -51,6 +51,9 @@
             </div>                            
         </section>                  
         <section class="inquiry pd-20  bk-lightgray">
+            <p id="thank-you-message" class="green">
+                Thank you for contacting us. We will be in touch with you very soon.
+            </p>
             <form>
                 <div class="left">
                     <img src="images/oak_2.svg" alt="Draw tree">   
@@ -63,27 +66,27 @@
                     <div class="tiny">
                         <div class="wrapper">
                             <i class="iconify" data-icon="bi:person-fill"></i>
-                            <input class="text" type="text" placeholder="Name">  
+                            <input class="text" type="text" placeholder="Name" required>  
                         </div>
         
                         <div class="wrapper">
                             <i class="iconify" data-icon="clarity:date-line"></i>
-                            <input class="text" type="text" placeholder="Date">  
+                            <input class="text" id="datefield" type="date" placeholder="Birth date" min="6" required>  
                         </div>
         
                         <div class="wrapper">
                             <i class="iconify" data-icon="ant-design:phone-filled"></i>
-                            <input class="text" type="text" placeholder="Contact">  
+                            <input class="text" type="tel" pattern="[0-9]{9}" placeholder="Phone" required>  
                         </div>
         
                         <div class="wrapper">
                             <i class="iconify" data-icon="clarity:email-solid"></i>
-                            <input class="text" type="text" placeholder="Email">  
+                            <input class="text" type="email" placeholder="Email" required>  
                         </div>
 
                         <div class="wrapper">
                             <i class="iconify" data-icon="clarity:alarm-clock-solid"></i>
-                            <input class="text" type="text" placeholder="Hours">  
+                            <input class="text" type="number" placeholder="Hours Available/week" min="1" required>  
                         </div>
                     </div>       
                     <div class="larger">
@@ -94,12 +97,12 @@
         
                         <div class="wrapper area">
                             <i class="iconify" data-icon="fa-solid:house-user"></i>
-                            <textarea name="Text1" cols="40" rows="4" placeholder="Address"></textarea>                     
+                            <textarea name="Text1" cols="40" rows="4" placeholder="Address" required></textarea>                     
                         </div>
         
                         <div class="wrapper">
                             <i class="iconify" data-icon="fa-solid:phone-volume"></i>
-                            <input class="text" type="text" placeholder="Emergency">  
+                            <input class="text" type="text" pattern="[0-9]{9}" placeholder="Emergency Contact" required>  
                         </div>
                     </div>                          
                     <div class="t-center">
@@ -142,6 +145,22 @@
     </footer>
     <script>
         var btnMenu = document.getElementById("btn-menu")
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+        dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+        mm = '0' + mm;
+        } 
+            
+        today = yyyy - 6 + '-' + mm + '-' + dd;        
+        document.getElementById("datefield").setAttribute("max", today);        
         
         function showNavMenu() {
             var x = document.getElementById("menu");
@@ -151,6 +170,14 @@
                 x.className = "nav-menu";
             }
         }
+
+        const form = document.querySelector('form');
+        const thankYouMessage = document.querySelector('#thank-you-message');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            thankYouMessage.classList.add('show');
+            setTimeout(() => form.submit(), 5000);
+        });
     </script>
 </body>
 </html>
