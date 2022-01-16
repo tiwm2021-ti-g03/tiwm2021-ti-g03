@@ -15,12 +15,7 @@ Repository to host the project developed for Internet Technologies, a first year
 
 ## Gallery
 * * *
-
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
-
+Check our design [here](https://www.figma.com/file/HdVGhxKR5UajM5QFCSY7Z4/Forest-Sons-Design?node-id=0%3A1)
 ## Technologies
 * * *
 

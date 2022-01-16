@@ -2,15 +2,21 @@
     <xs:element name="forests">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="forest" maxOccurs="unbounded">
+                <xs:element name="forest" maxOccurs="unbounded" minOccurs="2">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="name" type="xs:string"/>
-                            <xs:element name="image" type="xs:string"/>
+                            <xs:element name="image">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:anyURI">
+                                       <xs:pattern value="(https?:)[a-zA-Z0-9/._%=:()-]*.(png|jpe?g|svg)"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                             <xs:element name="area" type="xs:string"/>
                             <xs:element name="localization" type="xs:string"/> 
-                            <xs:element name="maps" type="xs:anyURI"/>                      
-                            <xs:element name="trashQnt" type="xs:string"/>                     
+                            <xs:element name="maps" type="xs:anyURI"></xs:element>
+                            <xs:element name="trashQnt" type="xs:float"/>                     
                             <xs:element name="description" type="xs:string"/>                     
                         </xs:sequence>                        
                     </xs:complexType>

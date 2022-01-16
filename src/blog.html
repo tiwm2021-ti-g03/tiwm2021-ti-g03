@@ -14,7 +14,7 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <title>Forest Sons - Blog</title>
 </head>
-<body page="blog">
+<body data-page="blog">
     <header>
         <nav class="pd-20">
             <a class="nav-brand" href="index.html">Forest Sons</a>
@@ -55,39 +55,7 @@
             <div class="warning-touch">
                 <span class="iconify" data-icon="tabler:hand-click" style="color: #005527;"></span>
             </div>
-            <div class="blog-gallery">
-                <figure class="post post-itm--1">
-                    <img id="imageRappel" class="post-img" alt="Rappel Post Image">
-                    <figcaption>
-                        <h4 id="titleRappel" class="post-title"></h4>
-                        <span id="dateRappel" class="post-date"></span>
-                        <p id="descriptionRappel" class="post-desc"></p>
-                    </figcaption>
-                </figure>
-                <figure class="post post-itm--2">
-                    <img id="imageTour" class="post-img" alt="World Tour Post Image">
-                    <figcaption>
-                        <h4 id="titleTour" class="post-title"></h4>
-                        <span id="dateTour" class="post-date"></span>
-                        <p id="descriptionTour" class="post-desc"></p>
-                    </figcaption>
-                </figure>
-                <figure class="post post-itm--3">
-                    <img id="imageOnu" class="post-img" alt="Onu News Post Image">
-                    <figcaption>
-                        <h4 id="titleOnu" class="post-title"></h4>
-                        <span id="dateOnu" class="post-date"></span>
-                        <p id="descriptionOnu" class="post-desc"></p>
-                    </figcaption>
-                </figure>
-                <figure class="post post-itm--4">
-                    <img id="imageTrash" class="post-img" alt="Goal Post Image">
-                    <figcaption>
-                        <h4 id="titleTrash" class="post-title"></h4>
-                        <span id="dateTrash" class="post-date"></span>
-                        <p id="descriptionTrash" class="post-desc"></p>
-                    </figcaption>
-                </figure>
+            <div class="blog-gallery" id="blog">               
             </div>
         </section>
     </main>
@@ -121,6 +89,7 @@
         </article>
     </footer>
     <script>
+
         var btnMenu = document.getElementById("btn-menu")
         
         function showNavMenu() {
@@ -132,40 +101,37 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", function(){
+        var oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 
-        //Reading XML File
-        var Connect = new XMLHttpRequest();
-        Connect.open("GET","blog.xml",false);
-        Connect.setRequestHeader("Content-Type", "text/xml");
-        Connect.send(null);
-        var document = Connect.responseXML;
+        function reportStatus() {
+        if (oXHR.readyState == 4)               // REQUEST COMPLETED.
+        showPosts(this.responseXML);      // ALL SET. NOW SHOW XML DATA.
+        }
 
-        // Reading forest with id geres from XML
-        var rappel = document.getElementById("rappel");	 
-        titleRappel.innerHTML += rappel.getElementsByTagName("title")[0].childNodes[0].nodeValue
-        imageRappel.src = rappel.getElementsByTagName("image")[0].childNodes[0].nodeValue
-        dateRappel.innerHTML += rappel.getElementsByTagName("date")[0].childNodes[0].nodeValue
-        descriptionRappel.innerHTML += rappel.getElementsByTagName("description")[0].childNodes[0].nodeValue
+        oXHR.onreadystatechange = reportStatus;
+        oXHR.open("GET", "blog.xml", true);        // true = ASYNCHRONOUS REQUEST (DESIRABLE), false = SYNCHRONOUS REQUEST.
+        oXHR.send();
+
+        function showPosts(xml) {
+
+            var divPostsList = document.getElementById('blog');
+            var Posts_List = xml.getElementsByTagName('post');            
+            
+            for (var i = 0; i < Posts_List.length; i++) {                
+                
+                divPostsList.innerHTML += 
+                `<figure class="post post-itm--`+[i+1]+`">
+                    <img class="post-img" alt="`+Posts_List[i].getElementsByTagName("title")[0].childNodes[0].nodeValue+`" src="`+Posts_List[i].getElementsByTagName("image")[0].childNodes[0].nodeValue+`">
+                    <figcaption>
+                        <h4 class="post-title">`+Posts_List[i].getElementsByTagName("title")[0].childNodes[0].nodeValue+`</h4>
+                        <span class="post-date">`+Posts_List[i].getElementsByTagName("date")[0].childNodes[0].nodeValue+`</span>
+                        <p class="post-desc">`+Posts_List[i].getElementsByTagName("description")[0].childNodes[0].nodeValue+`</p>
+                    </figcaption>
+                </figure>`;
+            }           
+
+        };
         
-        var onu = document.getElementById("onu");	 
-        titleOnu.innerHTML += onu.getElementsByTagName("title")[0].childNodes[0].nodeValue
-        imageOnu.src = onu.getElementsByTagName("image")[0].childNodes[0].nodeValue
-        dateOnu.innerHTML += onu.getElementsByTagName("date")[0].childNodes[0].nodeValue
-        descriptionOnu.innerHTML += onu.getElementsByTagName("description")[0].childNodes[0].nodeValue
-
-        var trash = document.getElementById("trash");	 
-        titleTrash.innerHTML += trash.getElementsByTagName("title")[0].childNodes[0].nodeValue
-        imageTrash.src = trash.getElementsByTagName("image")[0].childNodes[0].nodeValue
-        dateTrash.innerHTML += trash.getElementsByTagName("date")[0].childNodes[0].nodeValue
-        descriptionTrash.innerHTML += trash.getElementsByTagName("description")[0].childNodes[0].nodeValue
-
-        var tour = document.getElementById("tour");	 
-        titleTour.innerHTML += tour.getElementsByTagName("title")[0].childNodes[0].nodeValue
-        imageTour.src = tour.getElementsByTagName("image")[0].childNodes[0].nodeValue
-        dateTour.innerHTML += tour.getElementsByTagName("date")[0].childNodes[0].nodeValue
-        descriptionTour.innerHTML += tour.getElementsByTagName("description")[0].childNodes[0].nodeValue
-        });
     </script>
 </body>
 </html>

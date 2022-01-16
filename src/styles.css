@@ -4,16 +4,16 @@
     font-family: Poppins;
 }
 
-body[page=home]{
+body[data-page=home]{
     background: url(images/leaf-pattern.jpg);
     overflow-x: hidden;
 }
 
-body[page=other] header{
+body:not([data-page=home]) header{
     background: url(images/leaf-pattern.jpg);
 }
 
-body:not([page=home]) footer .background{
+body:not([data-page=home]) footer .background{
     background: white;
 }
 
@@ -564,6 +564,7 @@ h3 span::before{
     height: 2px;
     top: 50%;
 }
+
 .details .row:nth-child(1) .logo-lines::before{
     left: 0;
     right: 50%;
@@ -701,6 +702,12 @@ h3 span::before{
 }
 
 /* INQUIRY CSS*/
+
+.inquiry{
+    margin: 70px;
+    border-radius: 20px;
+}
+
 input{
     border-radius: 10px;
     border:none;
