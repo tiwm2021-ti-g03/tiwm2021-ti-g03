@@ -5,12 +5,12 @@
 }
 
 body[page=home]{
-    background: url(/images/leaf-pattern.jpg);
+    background: url(images/leaf-pattern.jpg);
     overflow-x: hidden;
 }
 
 body[page=other] header{
-    background: url(/images/leaf-pattern.jpg);
+    background: url(images/leaf-pattern.jpg);
 }
 
 body:not([page=home]) footer .background{
@@ -433,7 +433,7 @@ h3 span::before{
 }
 
 .background{
-    background-image: url(/images/background.jpg);
+    background-image: url(images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -511,10 +511,10 @@ h3 span::before{
     margin-bottom: 40px;
 }
 
-.gal-itm--2,
-.gal-itm--4,
-.gal-itm--5,
-.gal-itm--6{
+.mini-gallery > .gal-itm--2,
+.mini-gallery > .gal-itm--4,
+.mini-gallery > .gal-itm--5,
+.mini-gallery > .gal-itm--6{
     display: none;
 }
 
@@ -546,7 +546,7 @@ h3 span::before{
 }
 
 .details .row:nth-child(1) .logo-lines{
-    background: url("/images/logo_fs.svg") no-repeat top center;
+    background: url("images/logo_fs.svg") no-repeat top center;
     background-size: contain;
     display: block;
     height: 130px;
@@ -763,6 +763,12 @@ input:focus, textarea:focus{
     left: 1%;            
 }
 
+/* GALLERY PAGE */
+.gallery-section .gallery .gal-itm .gal-img{
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 40px;
+}
 
 /* MEDIAS*/
 
@@ -956,49 +962,49 @@ input:focus, textarea:focus{
         display: block; 
     }
 
-    .gal-itm--2,
-    .gal-itm--4,
-    .gal-itm--5,
-    .gal-itm--6{
+    .mini-gallery > .gal-itm--2,
+    .mini-gallery > .gal-itm--4,
+    .mini-gallery > .gal-itm--5,
+    .mini-gallery > .gal-itm--6{
         display: block;
     }
 
-    .gal-itm--1 {
+    .mini-gallery > .gal-itm--1 {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 4;
     }
 
-    .gal-itm--2 {
+    .mini-gallery > .gal-itm--2 {
         grid-column-start: 4;
         grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 4;
     }
 
-    .gal-itm--3 {
+    .mini-gallery > .gal-itm--3 {
         grid-column-start: 6;
         grid-column-end: 10;
         grid-row-start: 1;
         grid-row-end: 4;
     }
 
-    .gal-itm--4 {
+    .mini-gallery > .gal-itm--4 {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 4;
         grid-row-end: 7;
     }
 
-    .gal-itm--5 {
+    .mini-gallery > .gal-itm--5 {
         grid-column-start: 3;
         grid-column-end: 6;
         grid-row-start: 4;
         grid-row-end: 7;
     }
 
-    .gal-itm--6 {
+    .mini-gallery > .gal-itm--6 {
         grid-column-start: 6;
         grid-column-end: 10;
         grid-row-start: 4;
@@ -1130,6 +1136,65 @@ input:focus, textarea:focus{
 
     .inquiry .left .btn{
         margin-bottom: 20px;
+    }
+
+    /* GALLERY PAGE */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(22, 5vw);
+        grid-gap: 15px;
+        padding: 40px 70px;
+    }
+
+    .gallery-section .gallery .gal-itm .gal-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; 
+    }
+
+    .gallery .gal-itm--1 {
+        grid-column-start: 1;
+        grid-column-end: 10;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+
+    .gallery .gal-itm--2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 16;
+    }
+
+    .gallery .gal-itm--3 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 8;
+        grid-row-end: 12;
+    }
+
+    .gallery .gal-itm--4 {
+        grid-column-start: 7;
+        grid-column-end: 10;
+        grid-row-start: 8;
+        grid-row-end: 16;
+    }
+
+    .gallery .gal-itm--5 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 12;
+        grid-row-end: 16;
+    }
+
+    .gallery .gal-itm--6 {
+        grid-column-start: 1;
+        grid-column-end: 10;
+        grid-row-start: 16;
+        grid-row-end: 23;
     }
 }
 
